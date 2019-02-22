@@ -1,0 +1,20 @@
+<h2>LOGINATION</h2>
+<h4>{{responseLogination}}</h4>
+
+<form  #formLogin>
+
+  <input  [(ngModel)]="formLogInObj.login" type="text"
+
+          name="Login" placeholder="login">
+
+  <input [(ngModel)]="formLogInObj.password" type="text"
+
+         name="password" placeholder="password">
+
+  <button  (click)="logInto(formLogin)" type="button">Log In</button>
+
+</form>
+
+
+
+

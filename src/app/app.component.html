@@ -1,0 +1,19 @@
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <ul>
+    <li>
+      <a routerLink="login">Log In</a>
+    </li>
+    <li>
+      <a routerLink="register">Sign in</a>
+    </li>
+    <li *ngIf="message">
+      <a routerLink="users">Users</a>
+    </li>
+  </ul>
+  <button (click)="logOut()">Log out</button>
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,34 @@
+<div>
+<h2>Update user</h2>
+<form  #formToBeUpdated >
+  <input [ngModel]="user.id" [(ngModel)]="formRegisterObj.id" type="hidden"
+         name="id" placeholder="id">
+  <label>Login:
+    <input [ngModel]="user.login" [(ngModel)]="formRegisterObj.login" type="text"
+           name="login" placeholder="login">
+  </label><br>
+  <label>Password:
+    <input [ngModel]="user.password" [(ngModel)]="formRegisterObj.password" type="text"
+           name="password" placeholder="password">
+  </label><br>
+  <label>Name:
+    <input [ngModel]="user.name" [(ngModel)]="formRegisterObj.name" type="text"
+           name="name" placeholder="name">
+  </label><br>
+  <label>Surname:
+    <input [ngModel]="user.surname" [(ngModel)]="formRegisterObj.surname" type="text"
+           name="surname" placeholder="surname">
+  </label><br>
+  <label>Email:
+    <input [ngModel]="user.email" [(ngModel)]="formRegisterObj.email" type="text"
+           name="email" placeholder="email">
+  </label><br>
+  <label>DOB:
+    <input [ngModel]="user.dob" [(ngModel)]="formRegisterObj.dob" type="text"
+           name="dob" placeholder="dob">
+  </label><br>
+  <button  (click)="updateUser(formToBeUpdated)" type="button">Save Changes</button>
+</form>
+<h4>{{responseOnUpdate}}</h4>
+<button (click)="goToUsers()">Get back to Users-list</button>
+</div>

@@ -1,0 +1,15 @@
+<h3>USERS</h3>
+<ul>
+  <li *ngFor="let user of users">
+    <a [routerLink]="user.id" [queryParams]="user">ID: {{user.id}}</a>
+    <p>NAME: {{user.name}}</p>
+    <p>SURNAME: {{user.surname}}</p>
+    <button (click)="deleteUser(user)" *ngIf="!userToBeDeleted">DELETE</button>
+  </li>
+</ul>
+
+<p *ngIf="userToBeDeleted">Do you really want to delete user: {{userToBeDeleted.name}}
+  <button (click)="deleteUserById(userToBeDeleted.id)">DELETE this USER FINALLY</button>
+</p>
+
+

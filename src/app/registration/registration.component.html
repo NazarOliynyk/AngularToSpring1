@@ -1,0 +1,31 @@
+<h2>REGISTRATION</h2>
+<h3>{{responseRejestration}}</h3>
+
+<form  #formRegister>
+
+  <input  [(ngModel)]="formRegisterObj.login" type="text"
+
+          name="Login" placeholder="login">
+
+  <input [(ngModel)]="formRegisterObj.password" type="text"
+
+         name="password" placeholder="password">
+
+  <input [(ngModel)]="formRegisterObj.name" type="text"
+
+         name="name" placeholder="name">
+
+  <input [(ngModel)]="formRegisterObj.surname" type="text"
+
+         name="surname" placeholder="surname">
+
+  <input [(ngModel)]="formRegisterObj.email" type="text"
+
+         name="email" placeholder="email">
+
+  <input [(ngModel)]="formRegisterObj.dob" type="text"
+
+         name="dob" placeholder="dob">
+
+  <button  (click)="register(formRegister)" type="button">Sign In</button>
+</form>
